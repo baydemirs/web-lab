@@ -46,7 +46,7 @@ function App() {
       </a>
 
       <header>
-        <h1>Emirhan Aydemir</h1>
+        <h1 className="site-title">Emirhan Aydemir</h1>
 
         <nav aria-label="Ana navigasyon">
           <ul>
@@ -60,53 +60,63 @@ function App() {
       <main id="main-content">
         <section id="hakkimda">
           <h2>Hakkımda</h2>
-          <figure>
-            <img src="logo.jpeg" alt="Emirhan Aydemir'in vesikalık fotoğrafı" />
-            <figcaption>Emirhan Aydemir</figcaption>
-          </figure>
-          <p>
-            Merhaba! Ben Emirhan Aydemir. Web geliştirme alanında kendimi sürekli
-            geliştiren bir yazılımcıyım. Modern teknolojilerle kullanıcı dostu ve
-            erişilebilir projeler üretmeyi seviyorum.
-          </p>
+          <div className="about-content">
+            <figure>
+              <img src="logo.jpeg" alt="Emirhan Aydemir'in vesikalık fotoğrafı" />
+              <figcaption>Emirhan Aydemir</figcaption>
+            </figure>
+            <p>
+              Merhaba! Ben Emirhan Aydemir. Web geliştirme alanında kendimi sürekli
+              geliştiren bir yazılımcıyım. Modern teknolojilerle kullanıcı dostu ve
+              erişilebilir projeler üretmeyi seviyorum.
+            </p>
+          </div>
           <h3>Kullandığım Teknolojiler</h3>
-          <ul>
-            <li>HTML5 &amp; CSS3</li>
-            <li>JavaScript (ES6+)</li>
+          <ul className="skill-tags" role="list" aria-label="Beceri etiketleri">
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
             <li>React</li>
-            <li>Vite</li>
-            <li>Git &amp; GitHub</li>
+            <li>TypeScript</li>
+            <li>Git</li>
           </ul>
         </section>
 
         <section id="projeler">
           <h2>Projelerim</h2>
 
-          <article className="proje-karti">
-            <h3>Portföy Web Sitesi</h3>
-            <p>
-              Kişisel portföy sayfam. React ve Vite kullanılarak geliştirildi.
-              Erişilebilirlik ve semantik HTML prensiplerine uygun olarak tasarlandı.
-            </p>
-            <p><strong>Teknolojiler:</strong> React, Vite, CSS</p>
-            <img
-              src="https://placehold.co/400x200?text=Portf%C3%B6y"
-              alt="Portföy web sitesi ekran görüntüsü"
-            />
-          </article>
+          <div className="project-grid">
+            <article className="project-card">
+              <img src="https://placehold.co/400x200?text=E-Ticaret" alt="E-Ticaret sitesi anasayfa ekran görüntüsü" />
+              <h3>E-Ticaret Sitesi</h3>
+              <p>React ve Node.js ile geliştirilmiş tam kapsamlı bir e-ticaret uygulaması.</p>
+              <ul className="skill-tags">
+                <li>React</li>
+                <li>Node.js</li>
+                <li>MongoDB</li>
+              </ul>
+            </article>
 
-          <article className="proje-karti">
-            <h3>Görev Yöneticisi Uygulaması</h3>
-            <p>
-              Günlük görevlerini takip etmek için geliştirilmiş bir to-do uygulaması.
-              Kullanıcılar görev ekleyip, tamamlayıp silebilir.
-            </p>
-            <p><strong>Teknolojiler:</strong> JavaScript, HTML, CSS</p>
-            <img
-              src="https://placehold.co/400x200?text=G%C3%B6rev+Y%C3%B6neticisi"
-              alt="Görev yöneticisi uygulaması ekran görüntüsü"
-            />
-          </article>
+            <article className="project-card">
+              <img src="https://placehold.co/400x200?text=Blog" alt="Blog uygulaması yazı listesi görünümü" />
+              <h3>Blog Uygulaması</h3>
+              <p>Kişisel blog platformu. Markdown destekli yazı editörü.</p>
+              <ul className="skill-tags">
+                <li>TypeScript</li>
+                <li>Next.js</li>
+              </ul>
+            </article>
+
+            <article className="project-card">
+              <img src="https://placehold.co/400x200?text=Hava+Durumu" alt="Hava durumu uygulaması arayüzü" />
+              <h3>Hava Durumu</h3>
+              <p>OpenWeather API ile anlık hava durumu bilgisi.</p>
+              <ul className="skill-tags">
+                <li>JavaScript</li>
+                <li>API</li>
+              </ul>
+            </article>
+          </div>
         </section>
 
         <section id="iletisim">
